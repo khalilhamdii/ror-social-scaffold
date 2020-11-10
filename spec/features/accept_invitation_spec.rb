@@ -1,6 +1,7 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
-RSpec.feature "AcceptInvitations", type: :feature do
+RSpec.feature 'AcceptInvitations', type: :feature do
   scenario 'user can accept invitation' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Khalil hamdi'
@@ -59,3 +60,5 @@ RSpec.feature "AcceptInvitations", type: :feature do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength

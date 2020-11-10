@@ -1,2 +1,2 @@
 module UserHelper
-end  
+end

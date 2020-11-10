@@ -1,6 +1,7 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
-RSpec.feature "SendInvitations", type: :feature do
+RSpec.feature 'SendInvitations', type: :feature do
   scenario 'can send an invitation' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Khalil hamdi'
@@ -42,6 +43,6 @@ RSpec.feature "SendInvitations", type: :feature do
     within('div#pending_friends') do
       expect(page).to have_content 'Khalil hamdi'
     end
-    
   end
 end
+# rubocop:enable Metrics/BlockLength
