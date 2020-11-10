@@ -5,24 +5,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="nav">
-      <%= link_to 'Stay in touch', root_path %>
-      <div class="menu">
-        <div class="menu-item">
-          <%= menu_link_to 'Timeline', posts_path %>
-        </div>
-        <div class="menu-item">
-          <%= menu_link_to 'All users', users_path %>
-        </div>
+    <nav class="navbar bg-primary d-flex justify-content-between align-items-center">
+      <div>
+        <button onclick="location.href = '../';" class="btn btn-light font-weight-bold" >Stay in touch</button>
+        <button onclick="location.href = '../';" class="btn btn-primary font-weight-bold ml-5" >Timeline</button>
+        <button onclick="location.href = '../users';" class="btn btn-primary font-weight-bold" >All users</button>
+        <button onclick="location.href = '../friendships';" class="btn btn-primary font-weight-bold" >Friendships</button>
       </div>
-      <% if current_user %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign in', user_session_path %>
-      <% end %>
+      <div>
+        <% if current_user %>
+          <button onclick="location.href = '<%= user_path(current_user) %>';" class="btn btn-primary font-weight-bold" ><%= current_user.name %></button>
+          <button onclick="location.href = '<%= destroy_user_session_path %>';" class="btn btn-primary font-weight-bold" >Sign out</button>
+        <% else %>
+          <button onclick="location.href = '<%= user_session_path %>';" class="btn btn-primary font-weight-bold" >Sign in</button>
+        <% end %>
+      </div>
     </nav>
     <% if notice.present? %>
       <div class="notice">
@@ -34,7 +35,7 @@
         <p> <%= alert %> </p>
       </div>
     <% end %>
-    <main class="main">
+    <main class="container">
       <%= yield %>
     </main>
   </body>

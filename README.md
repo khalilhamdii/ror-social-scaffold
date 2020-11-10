@@ -1,93 +1,84 @@
-# Scaffold for social media app with Ruby on Rails
+# Ruby on Rails social media app
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
-## Built With
+## Library Directory 📙
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+| Contents                    |
+| --------------------------- |
+| [Built With](#built-with-🛠) |
+| [Install](#install-⏳)      |
+| [Testing](#testing-⚙️)      |
+| [Authors](#authors)         |
+| [License](#license)         |
 
-## Live Demo
+## Description
 
-TBA
+> The aim of the project was to create a social media app that you can create friendships, posts, comments and likes.
 
+![img](./app/assets/images/main-sc.png)
+![img](./app/assets/images/main-sc-1.png)
 
-## Getting Started
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
+## Built With 🛠
 
 ```
-bundle install
+- Ruby 2.6.3
+- Ruby on Rails 5.2.4.4
+- VS Code
 ```
 
-Setup database with:
+## Install ⏳
 
-```
-   rails db:create
-   rails db:migrate
-```
+> Follow these steps below to get my Application working
 
-### Github Actions
+1. - [ ] Open your `Terminal`
+2. - [ ] Navigate to the directory where you will like to install the repo by running `cd FOLDER-NAME`
+3. - [ ] Run `git clone git@github.com:DcRonan/ror-social-scaffold.git` to download <b>or</b> you can download using `HTTPS` by running `git clone https://github.com/DcRonan/ror-social-scaffold.git` in the terminal
+4. - [ ] Run `cd ror-social-scaffold` to enter directory
+5. - [ ] Run `bundle install` to install Ruby Gems (<b>hint:</b> Mac users, if not working then run `sudo bundle install`)
+6. - [ ] Run `rails db:create` to create a local database
+7. - [ ] Run `rails db:migrate` to migrate the database
+8. - [ ] Run `http://localhost:3000/` in your browser to start the application
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+## Testing ⚙️
 
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
+> I have used [rspec](https://rspec.info/) testing tool to test the code by creating many test cases. Please follow below to test my code
 
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+1. - [ ] Open `Terminal` again
+2. - [ ] Run `cd ror-social-scaffold` to enter directory
+3. - [ ] Run `rspec` to start testing
+4. - [ ] All tests will pass ✅
 
 ## Authors
 
-TBA
+### 👨‍💻 Daniel Ronan
 
-## 🤝 Contributing
+[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/DcRonan) <br>
+[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/danronan10/) <br>
+[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:danielconnorronan@gmail.com) <br>
+[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/dc_ronan)
+
+### 👨‍💻 Khalil Hamdi
+
+[![GitHub](https://img.shields.io/badge/-GitHub-000?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/khalilhamdii) <br>
+[![LINKEDIN](https://img.shields.io/badge/-LINKEDIN-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/khalilhamdi/) <br>
+[![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:khaalil.hamdi@gmail.com) <br>
+[![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/Khalilhamdiii)
+
+### Acknowledgments 🌟
+
+[Microverse](https://github.com/microverseinc/ror-social-scaffold)
+
+### 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/DcRonan/ruby-slack-bot/issues).
 
-## Show your support
+### Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+### License
 
-TBA
-
-## 📝 License
-
-TBA
-
+![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking?color=red&style=for-the-badge)
