@@ -1,8 +1,12 @@
 class FriendshipsController < ApplicationController
   def index
-    @friend_requests = current_user.friend_requests
-    @pending_friends = current_user.pending_friends
-    @friends = current_user.friends
+    if user_signed_in?
+      @friend_requests = current_user.friend_requests
+      @pending_friends = current_user.pending_friends
+      @friends = current_user.friends
+    else
+      redirect_to root_path
+    end 
     @friend = User.where('id=?', :friend_id)
   end
 
