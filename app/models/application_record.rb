@@ -3,7 +3,7 @@ class ApplicationRecord < ActiveRecord::Base
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.status }
-    friends_array += inverse_friendships.map { |friendship| friendship.user if friendship.status }
+    friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.status }
     friends_array.compact
   end
 
