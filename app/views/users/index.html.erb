@@ -2,7 +2,7 @@
   <h1> All Users </h1>
   <ul class="users-list">
     <% @users.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
+      <h4><%= link_to friend.name, user_path(friend), class: 'text-primary' %></h4>
       <%= button(friend) %>
     <% end %>
   </ul>
