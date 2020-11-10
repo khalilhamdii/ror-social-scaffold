@@ -14,14 +14,4 @@ class ApplicationRecord < ActiveRecord::Base
   def friend_requests
     inverse_friendships.map{|friendship| friendship.user if !friendship.status}.compact
   end
-
-  def confirm_friend(user)
-    friendship = inverse_friendships.find{|friendship| friendship.user == user}
-    friendship.status = true
-    friendship.save
-  end
-
-  def friend?(user)
-    friends.include?(user)
-  end
 end
