@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "SendInvitations", type: :feature do
-  scenario 'can send an invitation' do
+RSpec.feature "AcceptInvitations", type: :feature do
+  scenario 'user can accept invitation' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Khalil hamdi'
     fill_in :user_email, with: 'khaalil.hamdi@gmail.com'
@@ -18,10 +18,18 @@ RSpec.feature "SendInvitations", type: :feature do
     click_on 'Sign up'
     visit '/users/'
     click_on 'Send invitation'
-    expect(page).to have_content 'Pending Invitation'
+    click_on 'Sign out'
+    visit '/users/sign_in'
+    fill_in :user_email, with: 'khaalil.hamdi@gmail.com'
+    fill_in :user_password, with: 'password'
+    click_on 'Log in'
+    visit '/friendships/'
+    within('div#friend_requests') do
+      expect(page).to have_content 'Accept Invitation'
+    end
   end
 
-  scenario 'user name invited should apprear in the pending friends list' do
+  scenario 'Friend should appear in the friend list after accepting invitation' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Khalil hamdi'
     fill_in :user_email, with: 'khaalil.hamdi@gmail.com'
@@ -38,10 +46,16 @@ RSpec.feature "SendInvitations", type: :feature do
     click_on 'Sign up'
     visit '/users/'
     click_on 'Send invitation'
+    click_on 'Sign out'
+    visit '/users/sign_in'
+    fill_in :user_email, with: 'khaalil.hamdi@gmail.com'
+    fill_in :user_password, with: 'password'
+    click_on 'Log in'
     visit '/friendships/'
-    within('div#pending_friends') do
-      expect(page).to have_content 'Khalil hamdi'
+    click_on 'Accept Invitation'
+    visit '/friendships/'
+    within('div#friend_list') do
+      expect(page).to have_content 'Daniel Ronan'
     end
-    
   end
 end
