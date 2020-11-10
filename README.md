@@ -12,7 +12,10 @@
 | [License](#license) | 
 
 ## Description
-> The aim of the project was to create a social media app that you can create friendships.
+> The aim of the project was to create a social media app that you can create friendships, posts, comments and likes.
+
+![img](./app/assets/images/main-sc.png)
+![img](./app/assets/images/main-sc-1.png)
 
 ## Built With 🛠
 ```
