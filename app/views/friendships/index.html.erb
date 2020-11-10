@@ -12,7 +12,7 @@
     <h4><%= link_to friend.name, user_path(friend) %></h4>
   <% end %>
   <h2> Friend list</h2>
-  <% current_user.friends.each do |friend| %>
+  <% @friends.each do |friend| %>
     <h4><%= link_to friend.name, user_path(friend) %></h4>
   <% end %>
 </section>

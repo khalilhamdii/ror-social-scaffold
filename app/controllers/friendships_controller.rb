@@ -16,9 +16,14 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    friendship = Friendship.where(user_id: params[:friend_id], friend_id: params[:user_id])
-    friendship.update(status: true)
-    redirect_to friendships_path
+    friendship = current_user.inverse_friendships.find_by(user_id: params[:friend_id])
+    friendship.status = true
+    if friendship.save
+      Friendship.create(user_id: current_user.id, friend_id: params[:friend_id], status: true)
+      redirect_to friendships_path
+    else
+      redirect_to friendships_path  
+    end
   end
 
   def destroy
@@ -30,6 +35,6 @@ class FriendshipsController < ApplicationController
   private
 
   def friendship_params
-    params.require(:friendship).permit(:user_id, :friend_id,:status)
+    params.require(:friendship).permit(:user_id, :friend_id, :status)
   end
 end

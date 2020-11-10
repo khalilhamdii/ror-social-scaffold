@@ -347,3 +347,14 @@ form {
     width: 50%;
   }
 }
+
+.users-section h2,
+.users-section h1 {
+  color: $primary-color-dark;
+}
+
+.users-section ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

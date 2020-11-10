@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def button(friend)
-      if !Friendship.exists?(user_id: current_user.id, friend_id: friend.id)&& !Friendship.exists?(user_id: friend.id, friend_id: current_user.id)
+      if !current_user.friend?(friend)
         render 'friendships/request_btn', friend: friend
       elsif Friendship.exists?(user_id: current_user.id, friend_id: friend.id, status: false)
         render 'friendships/pending_btn'
