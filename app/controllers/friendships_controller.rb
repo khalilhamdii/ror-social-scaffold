@@ -25,7 +25,7 @@ class FriendshipsController < ApplicationController
     if friendship.save
       Friendship.create(user_id: current_user.id, friend_id: params[:friend_id], status: true)
       redirect_to friendships_path
-    end  
+    end
   end
 
   def destroy
