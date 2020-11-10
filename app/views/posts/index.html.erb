@@ -1,17 +1,16 @@
-<div class="d-flex justify-content-center text-center p-4">
+<div class="d-flex justify-content-center flex-column text-center p-4">
   <%= form_for(@post) do |form| %>
-  <%= form.label :content, class: 'text' %>
-  <%= form.text_field :content, id: :post_content, size: 70, class: 'form-control', placeholder: 'Add New Post' %>
-  <%= display_errors(@post) %>
-  <%= form.submit 'Save', class: 'btn btn-primary mt-2' %>
-<% end %>
+    <h1> <%= form.label :content %> </h1>
+    <%= form.text_field :content, id: :post_content, size: 60, class: 'form-control', placeholder: 'Add New Post' %>
+    <%= display_errors(@post) %>
+    <%= form.submit 'Save', class: 'btn btn-primary mt-2' %>
+  <% end %>
+  <article class="p-4">
+    <h2>
+      Recent posts
+    </h2>
+    <ul>
+      <%= render @timeline_posts %>
+    </ul>
+  </article>
 </div>
-
-<article class="timeline">
-  <h3>
-    Recent posts
-  </h3>
-  <ul class="posts">
-    <%= render @timeline_posts %>
-  </ul>
-</article>
