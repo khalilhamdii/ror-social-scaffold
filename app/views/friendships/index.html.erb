@@ -1,11 +1,18 @@
 <section class="users-section">
-    <h2> All Users </h2>
-    <% @users.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
-      <%= button(friend) %>
-    <% end %>
-    <h2> Friend list</h2>
-    <% @friends.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
-    <% end %>
+  <h2> Friend requests </h2>
+  <% @friend_requests.each do |friend| %>
+    <h4><%= link_to friend.name, user_path(friend) %></h4>
+    <%= link_to 'Accept Invitation',
+      friendships_update_path(user_id: current_user.id, friend_id: friend.id) %>
+    <%= link_to 'Decline Invitation',
+      friendships_destroy_path(user_id: current_user.id, friend_id: friend.id) %>
+  <% end %>
+  <h2> Pending friends </h2>
+  <% @pending_friends.each do |friend| %>
+    <h4><%= link_to friend.name, user_path(friend) %></h4>
+  <% end %>
+  <h2> Friend list</h2>
+  <% current_user.friends.each do |friend| %>
+    <h4><%= link_to friend.name, user_path(friend) %></h4>
+  <% end %>
 </section>

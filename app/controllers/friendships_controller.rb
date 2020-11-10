@@ -1,8 +1,9 @@
 class FriendshipsController < ApplicationController
   def index
-    @users = User.where('id<>?', current_user.id)
-    @friendship = Friendship.new
+    @friend_requests = current_user.friend_requests
+    @pending_friends = current_user.pending_friends
     @friends = current_user.friends
+    @friend = User.where('id=?', :friend_id)
   end
 
   def new
@@ -11,6 +12,18 @@ class FriendshipsController < ApplicationController
 
   def create
     @friendship = Friendship.create(friendship_params)
+    redirect_to friendships_path
+  end
+
+  def update
+    friendship = Friendship.where(user_id: params[:friend_id], friend_id: params[:user_id])
+    friendship.update(status: true)
+    redirect_to friendships_path
+  end
+
+  def destroy
+    friendship = Friendship.where(user_id: params[:user_id], friend_id: params[:friend_id])
+    friendship.destroy
     redirect_to friendships_path
   end
 
