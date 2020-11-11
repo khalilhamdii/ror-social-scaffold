@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Friendship, type: :model do
+RSpec.describe Like, type: :model do
   it 'checks if belongs to User' do
     should belong_to(:user)
   end
 
   it 'checks if belongs to User' do
-    should belong_to(:friend)
+    should belong_to(:post)
   end
 end

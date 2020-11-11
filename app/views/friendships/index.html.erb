@@ -1,24 +1,34 @@
-<section class="users-section">
-  <div id="friend_requests">
-    <h2> Friend requests </h2>
+<div id="friend_requests">
+  <div class="shadow-sm mx-auto mt-4  p-3 mb-5 bg-white rounded w-50">
+    <h4 class="mb-4"> Friend requests </h4>
     <% @friend_requests.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
-      <%= link_to 'Accept Invitation',
+      <div class="bg-light mx-4 rounded px-4 py-3 mb-4 d-flex justify-content-between">
+        <h5><%= link_to friend.name, user_path(friend) %></h5>
+        <%= link_to 'Accept Invitation',
       friendships_update_path(user_id: current_user.id, friend_id: friend.id) %>
-      <%= link_to 'Decline Invitation',
+        <%= link_to 'Decline Invitation',
       friendships_destroy_path(user_id: current_user.id, friend_id: friend.id) %>
+      </div>
     <% end %>
   </div>
-  <div id="pending_friends">
-    <h2> Pending friends </h2>
+</div>
+<div id="pending_friends">
+  <div class="shadow-sm mx-auto mt-4  p-3 mb-5 bg-white rounded w-50">
+    <h4 class="mb-4"> Pending friends </h4>
     <% @pending_friends.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
+      <div class="bg-light mx-4 rounded px-4 py-3 mb-4 d-flex justify-content-between">
+        <h5><%= link_to friend.name, user_path(friend) %></h5>
+      </div>
     <% end %>
   </div>
-  <div id="friend_list">
-    <h2> Friend list</h2>
+</div>
+<div id="friend_list">
+  <div class="shadow-sm mx-auto mt-4  p-3 mb-5 bg-white rounded w-50">
+    <h4 class="mb-4"> Friend List </h4>
     <% @friends.each do |friend| %>
-      <h4><%= link_to friend.name, user_path(friend) %></h4>
+      <div class="bg-light mx-4 rounded px-4 py-3 mb-4 d-flex justify-content-between">
+        <h5><%= link_to friend.name, user_path(friend) %></h5>
+      </div>
     <% end %>
   </div>
-</section>
+</div>

@@ -18,6 +18,7 @@
 
 ![img](./app/assets/images/main-sc.png)
 ![img](./app/assets/images/main-sc-1.png)
+![img](./app/assets/images/main-sc-2.png)
 
 ## Built With 🛠
 
