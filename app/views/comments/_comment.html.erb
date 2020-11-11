@@ -1,6 +1,7 @@
-<div class="post-comments">
-  <p>
-    <b><%= comment.user.name %>:</b> <%= comment.content %>
-  </p>
-  <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
+<div class="p-2 text-left bg-light py-3 pl-3 mt-4 mx-4 rounded">
+  <%= link_to comment.user.name, user_path(comment.user), class: 'font-weight-bold text-dark' %> <br>
+  <span class="font-weight-light"><%= comment.created_at.strftime("%Y/%m/%d") %></span>
+  <div>
+    <%= comment.content %>
+  </div>
 </div>

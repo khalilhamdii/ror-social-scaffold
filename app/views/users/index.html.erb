@@ -1,5 +1,9 @@
-<section class="users-section">
-  <ul class="users-list">
-    <%= render @users %>
-  </ul>
-</section>
+<div class="shadow-sm mx-auto mt-4  p-3 mb-5 bg-white rounded w-50">
+  <h3 class="mb-4"> All Users </h3>
+  <% @users.each do |friend| %>
+    <div class="bg-light mx-4 rounded px-5 py-3 mb-4 d-flex justify-content-between">
+      <h5><%= link_to friend.name, user_path(friend), class: 'text-primary' %></h5>
+      <%= button(friend) %>
+    </div>
+  <% end %>
+</div>
