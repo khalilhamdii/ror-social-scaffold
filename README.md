@@ -6,7 +6,7 @@
 
 | Contents                    |
 | --------------------------- |
-| [Live Demo](#live-demo) |
+| [Live Demo](#live-demo)     |
 | [Screenshots](#screenshots) |
 | [Built With](#built-with-🛠) |
 | [Install](#install-⏳)      |
@@ -19,12 +19,12 @@
 > The aim of the project was to create a social media app that you can create friendships, posts, comments and likes.
 
 ## Live Demo
+
 [Heroku link](https://safe-crag-08093.herokuapp.com)
 
 ## Screenshots
-![img](./app/assets/images/main-sc.png)
-![img](./app/assets/images/main-sc-1.png)
-![img](./app/assets/images/main-sc-2.png)
+
+![img](./app/assets/images/main.png)
 
 ## Built With 🛠
 
