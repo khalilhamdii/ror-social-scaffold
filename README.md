@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-[Heroku link](https://safe-crag-08093.herokuapp.com)
+[Heroku link](https://fathomless-temple-93868.herokuapp.com/)
 
 ## Screenshots
 
