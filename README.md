@@ -16,7 +16,7 @@
 
 ## Description
 
-> The aim of the project was to create a social media app that you can create friendships, posts, comments and likes.
+> Stay In Touch is a social media app, where a user can create an account, send & accept friend requests and add posts, comments, and likes. This project was built using Ruby On Rails and deployed on Heroku.
 
 ## Live Demo
 
