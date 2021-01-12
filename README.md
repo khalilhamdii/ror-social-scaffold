@@ -2,6 +2,10 @@
 
 ![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
+## Description
+
+> Stay In Touch is a social media app, where a user can create an account, send & accept friend requests and add posts, comments, and likes. This project was built using Ruby On Rails and deployed on Heroku.
+
 ## Library Directory 📙
 
 | Contents                    |
@@ -13,10 +17,6 @@
 | [Testing](#testing-⚙️)      |
 | [Authors](#authors)         |
 | [License](#license)         |
-
-## Description
-
-> Stay In Touch is a social media app, where a user can create an account, send & accept friend requests and add posts, comments, and likes. This project was built using Ruby On Rails and deployed on Heroku.
 
 ## Live Demo
 
